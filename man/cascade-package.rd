@@ -2,9 +2,13 @@
 \alias{CascadeData-package}
 \alias{CascadeData}
 \docType{package}
-\title{The Data for the Cascade Package}
+\title{Experimental Data of a Cascade experiment in genomics}
 \description{
-Datasets used as examples in the vignette of the Cascade package, a modeling tool allowing gene selection, reverse engineering, and prediction in Cascade networks.
+These Experimental Data are used as examples by packages such as the Cascade one <doi:10.1093/bioinformatics/btt705> in one of its vignettes.
+
+
+
+The Cascade package is a modeling tool allowing gene selection, reverse engineering, and prediction in Cascade networks.
 }
 \details{
 \tabular{ll}{
@@ -17,8 +21,8 @@ License: \tab GNU 2.0\cr
 
 }
 \author{
-This package has been written by Fr\'ed\'eric Bertrand, Myriam Maumy-Bertrand and Nicolas Jung with biological insights from Laurent Vallat.
-Maintainer:  Fr\'ed\'eric Bertrand <frederic.bertrand@math.unistra.fr>
+This package has been written by Frederic Bertrand, Myriam Maumy-Bertrand and Nicolas Jung with biological insights from Laurent Vallat.
+Maintainer:  Frederic Bertrand <frederic.bertrand@math.unistra.fr>
 }
 
 

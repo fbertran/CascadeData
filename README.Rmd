@@ -1,0 +1,52 @@
+---
+output: github_document
+---
+
+[![CRAN status](https://www.r-pkg.org/badges/version/CascadeData)](https://cran.r-project.org/package=CascadeData)
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+# CascadeData
+
+The goal of CascadeData is to provide experimental data that are used as examples by packages such as the Cascade one, a modeling tool allowing gene selection, reverse engineering, and prediction in cascade networks. (Jung, N., Bertrand, F., Bahram, S., Vallat, L., and Maumy-Bertrand, M., 2014, <doi:10.1093/bioinformatics/btt705>).
+
+## Installation
+
+You can install the released version of CascadeData from [CRAN](https://CRAN.R-project.org) with:
+
+``` r
+install.packages("CascadeData")
+```
+
+## Example
+
+Two data frames with 54613 probesets measured 6 times throught 4 time points.
+
+```{r exampleS}
+data(micro_S)
+str(micro_S)
+```
+
+```{r exampleUS}
+data(micro_US)
+str(micro_US)
+```
+
+You can also embed plots, for example:
+
+```{r heatmapS, echo = FALSE}
+heatmap(as.matrix(t(micro_S[1:200,])))
+```
+
+```{r heatmapUS, echo = FALSE}
+heatmap(as.matrix(t(micro_US[1:200,])))
+```
+

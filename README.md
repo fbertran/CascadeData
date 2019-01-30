@@ -19,7 +19,7 @@ You can install the released version of CascadeData from [CRAN](https://CRAN.R-p
 install.packages("CascadeData")
 ```
 
-## Example
+## Examples
 
 Two data frames with 54613 probesets measured 6 times throught 4 time points.
 

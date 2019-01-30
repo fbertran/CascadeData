@@ -11,7 +11,8 @@ knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>",
   fig.path = "man/figures/README-",
-  out.width = "100%"
+  out.width = "100%",
+  dpi=300,fig.width=7
 )
 ```
 # CascadeData
@@ -26,7 +27,7 @@ You can install the released version of CascadeData from [CRAN](https://CRAN.R-p
 install.packages("CascadeData")
 ```
 
-## Example
+## Examples
 
 Two data frames with 54613 probesets measured 6 times throught 4 time points.
 

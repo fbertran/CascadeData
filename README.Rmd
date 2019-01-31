@@ -1,6 +1,6 @@
 ---
 title: "Experimental Data of Cascade Experiments in Genomics"
-author: "Frédéric Bertrand, Myriam Maumy-Bertrand"
+author: "Frédéric Bertrand and Myriam Maumy-Bertrand"
 output: github_document
 ---
 
@@ -14,7 +14,7 @@ knitr::opts_chunk$set(
   comment = "#>",
   fig.path = "man/figures/README-",
   out.width = "100%",
-  dpi=300,fig.width=7
+  dpi=150,fig.width=7
 )
 ```
 # CascadeData
@@ -25,10 +25,15 @@ The goal of CascadeData is to provide experimental data that are used as example
 
 You can install the released version of CascadeData from [CRAN](https://CRAN.R-project.org) with:
 
-``` r
+```{r, eval = FALSE}
 install.packages("CascadeData")
 ```
 
+You can install the development version of CascadeData from [github](https://github.com) with:
+
+```{r, eval = FALSE}
+devtools::install_github("fbertran/CascadeData")
+```
 ## Examples
 
 Two data frames with 54613 probesets measured 6 times throught 4 time points.

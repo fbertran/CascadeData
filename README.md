@@ -1,4 +1,6 @@
 ---
+title: "Experimental Data of Cascade Experiments in Genomics"
+author: "Frédéric Bertrand, Myriam Maumy-Bertrand"
 output: github_document
 ---
 

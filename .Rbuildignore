@@ -1,12 +1,11 @@
-^README\.Rmd$
+#All packages
 ^.*\.Rproj$
 ^\.Rproj\.user$
 ^\.gitignore$
-^css*$
-^fullrespdf*$
-^images*$
-^index\.html$
-^js*$
+^README\.Rmd$
 ^NEWS\.md$    
 ^docs*$
-^man/figures*$
+#No size problem for CascadeData can keep the man figures
+#^man/figures*$
+#Specific
+^fullrespdf*$

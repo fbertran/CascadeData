@@ -1,6 +1,6 @@
 ---
 title: "Experimental Data of Cascade Experiments in Genomics"
-author: "Frédéric Bertrand, Myriam Maumy-Bertrand"
+author: "Frédéric Bertrand and Myriam Maumy-Bertrand"
 output: github_document
 ---
 
@@ -14,7 +14,7 @@ knitr::opts_chunk$set(
   comment = "#>",
   fig.path = "man/figures/README-",
   out.width = "100%",
-  dpi=300,fig.width=7
+  dpi=150,fig.width=7
 )
 ```
 # CascadeData

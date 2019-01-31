@@ -1,7 +1,7 @@
 Package: CascadeData
 Type: Package
 Title: Experimental Data of Cascade Experiments in Genomics
-Version: 1.0
+Version: 1.1
 Date: 2019-01-27
 Depends: R (>= 2.10)
 Imports: 
@@ -16,5 +16,6 @@ Maintainer: Frederic Bertrand <frederic.bertrand@math.unistra.fr>
 Description: These Experimental Data are used as examples by packages such as the Cascade one, a modeling tool allowing gene selection, reverse engineering, and prediction in cascade networks. Jung, N., Bertrand, F., Bahram, S., Vallat, L., and Maumy-Bertrand, M. (2014) <doi:10.1093/bioinformatics/btt705>.
 License: GPL (>= 2)
 Encoding: UTF-8
-URL: http://www-irma.u-strasbg.fr/~fbertran/
 RoxygenNote: 6.1.1
+URL: http://www-irma.u-strasbg.fr/~fbertran/, https://github.com/fbertran/CascadeData
+BugReports: https://github.com/fbertran/CascadeData/issues

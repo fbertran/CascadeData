@@ -7,4 +7,6 @@
 ^images*$
 ^index\.html$
 ^js*$
-^README\.md$
+^NEWS\.md$    
+^docs*$
+^man/figures*$

@@ -32,9 +32,11 @@
 
 <meta property="og:title" content="Experimental Data of Cascade Experiments in Genomics — CascadeData-package" />
 
-<meta property="og:description" content="These Experimental Data are used as examples by packages such as the Cascade one &amp;lt;doi:10.1093/bioinformatics/btt705&amp;gt; in one of its vignettes." />
+<meta property="og:description" content="This is the GSE39411 dataset, https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE39411, Vallat, L., Kemper, C. A., Jung, N., Maumy-Bertrand, M., Bertrand, F., &amp;#8230;, Bahram, S. (2013). Reverse-engineering the genetic circuitry of a cancer cell with predicted intervention in chronic lymphocytic leukemia. Proceedings of the National Academy of Sciences, 110(2), 459-464, https://doi.org/10.1073/pnas.1211130110" />
 
-<meta property="og:description" content="The Cascade package is a modeling tool allowing gene selection, reverse engineering, and prediction in Cascade networks." />
+<meta property="og:description" content="The data were normalized and are ready to use." />
+
+<meta property="og:description" content="These Experimental Data are used as examples by packages such as the Cascade one &amp;lt;doi:10.1093/bioinformatics/btt705&amp;gt; in one of its vignettes. The Cascade package is a modeling tool allowing gene selection, reverse engineering, and prediction in Cascade networks." />
 <meta name="twitter:card" content="summary" />
 
 
@@ -65,7 +67,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">CascadeData</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.1</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.2</span>
       </span>
     </div>
 
@@ -111,9 +113,11 @@
 
     <div class="ref-description">
     
-    <p>These Experimental Data are used as examples by packages such as the Cascade one &lt;doi:10.1093/bioinformatics/btt705&gt; in one of its vignettes.</p>
+    <p>This is the GSE39411 dataset, <a href='https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE39411'>https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE39411</a>, Vallat, L., Kemper, C. A., Jung, N., Maumy-Bertrand, M., Bertrand, F., &#8230;, Bahram, S. (2013). Reverse-engineering the genetic circuitry of a cancer cell with predicted intervention in chronic lymphocytic leukemia. Proceedings of the National Academy of Sciences, 110(2), 459-464, <a href='https://doi.org/10.1073/pnas.1211130110'>https://doi.org/10.1073/pnas.1211130110</a></p>
 
-    <p>The Cascade package is a modeling tool allowing gene selection, reverse engineering, and prediction in Cascade networks.</p>
+    <p>The data were normalized and are ready to use.</p>
+
+    <p>These Experimental Data are used as examples by packages such as the Cascade one &lt;doi:10.1093/bioinformatics/btt705&gt; in one of its vignettes. The Cascade package is a modeling tool allowing gene selection, reverse engineering, and prediction in Cascade networks.</p>
     
     </div>
 

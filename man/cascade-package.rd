@@ -4,11 +4,13 @@
 \docType{package}
 \title{Experimental Data of Cascade Experiments in Genomics}
 \description{
-These Experimental Data are used as examples by packages such as the Cascade one <doi:10.1093/bioinformatics/btt705> in one of its vignettes.
+This is the GSE39411 dataset, \url{https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE39411}, Vallat, L., Kemper, C. A., Jung, N., Maumy-Bertrand, M., Bertrand, F., \dots, Bahram, S. (2013). Reverse-engineering the genetic circuitry of a cancer cell with predicted intervention in chronic lymphocytic leukemia. Proceedings of the National Academy of Sciences, 110(2), 459-464, \url{https://doi.org/10.1073/pnas.1211130110}
 
 
+The data were normalized and are ready to use.
 
-The Cascade package is a modeling tool allowing gene selection, reverse engineering, and prediction in Cascade networks.
+
+These Experimental Data are used as examples by packages such as the Cascade one <doi:10.1093/bioinformatics/btt705> in one of its vignettes. The Cascade package is a modeling tool allowing gene selection, reverse engineering, and prediction in Cascade networks.
 }
 \details{
 \tabular{ll}{

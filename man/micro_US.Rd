@@ -5,7 +5,7 @@
 Unstimulated data
 }
 \description{
-Unstimulated data
+This is the unstimulated data part of the GSE39411 dataset, \url{https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE39411}. Data were normalized and are ready to use.
 }
 \usage{data(micro_US)}
 \format{
@@ -13,11 +13,7 @@ Unstimulated data
 }
 
 \references{
-Vallat, L., Park, Y., Li, C., & Gribben, J. G. (2007). Temporal genetic program following B-cell receptor cross-linking: altered balance between proliferation and death in healthy and malignant B cells. Blood, 109(9), 3989-3997.
-
-
-
-Vallat, L., Kemper, C. A., Jung, N., Maumy-Bertrand, M., Bertrand, F., ... & Bahram, S. (2013). Reverse-engineering the genetic circuitry of a cancer cell with predicted intervention in chronic lymphocytic leukemia. Proceedings of the National Academy of Sciences, 110(2), 459-464.}
+Vallat, L., Kemper, C. A., Jung, N., Maumy-Bertrand, M., Bertrand, F., \dots, Bahram, S. (2013). Reverse-engineering the genetic circuitry of a cancer cell with predicted intervention in chronic lymphocytic leukemia. Proceedings of the National Academy of Sciences, 110(2), 459-464, \url{https://dx.doi.org/10.1073/pnas.1211130110}.}
 
 \examples{
 data(micro_US)

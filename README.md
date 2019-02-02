@@ -11,7 +11,9 @@ output: github_document
 
 # CascadeData
 
-The goal of CascadeData is to provide experimental data that are used as examples by packages such as the Cascade one, a modeling tool allowing gene selection, reverse engineering, and prediction in cascade networks. (Jung, N., Bertrand, F., Bahram, S., Vallat, L., and Maumy-Bertrand, M., 2014, <http://dx.doi.org/10.1093/bioinformatics/btt705>).
+The goal of CascadeData is to provide the experimental data [GSE39411](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE39411) in a ready to use format. Vallat L, Kemper CA, Jung N, Maumy-Bertrand M, Bertrand F, \dots, Bahram S, (2013), "Reverse-engineering the genetic circuitry of a cancer cell with predicted intervention in chronic lymphocytic leukemia". *Proc Natl Acad Sci USA*, **110**(2):459-64, <https://dx.doi.org/10.1073/pnas.1211130110>.
+
+These are featured as examples by packages such as the Cascade one, a modeling tool allowing gene selection, reverse engineering, and prediction in cascade networks. (Jung, N., Bertrand, F., Bahram, S., Vallat, L., and Maumy-Bertrand, M., 2014, <http://dx.doi.org/10.1093/bioinformatics/btt705>).
 
 ## Installation
 

@@ -10,7 +10,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous">
 <!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script><!-- sticky kit --><script src="https://cdnjs.cloudflare.com/ajax/libs/sticky-kit/1.1.3/sticky-kit.min.js" integrity="sha256-c4Rlo1ZozqTPE2RLuvbusY3+SU1pQaJC0TjuhygMipw=" crossorigin="anonymous"></script><!-- pkgdown --><link href="pkgdown.css" rel="stylesheet">
 <script src="pkgdown.js"></script><meta property="og:title" content="Experimental Data of Cascade Experiments in Genomics">
-<meta property="og:description" content="These Experimental Data (GSE39411, &lt;doi:10.1073/pnas.1211130110&gt;) are used as examples by packages such as the Cascade one, a modeling tool allowing gene selection, reverse engineering, and prediction in cascade networks. Jung, N., Bertrand, F., Bahram, S., Vallat, L., and Maumy-Bertrand, M. (2014) &lt;doi:10.1093/bioinformatics/btt705&gt;.">
+<meta property="og:description" content="These experimental expression data (5 leukemic 'CLL' B-lymphocyte of aggressive form from 'GSE39411', &lt;doi:10.1073/pnas.1211130110&gt;), after B-cell receptor stimulation, are used as examples by packages such as the 'Cascade' one, a modeling tool allowing gene selection, reverse engineering, and prediction in cascade networks. Jung, N., Bertrand, F., Bahram, S., Vallat, L., and Maumy-Bertrand, M. (2014) &lt;doi:10.1093/bioinformatics/btt705&gt;.">
 <meta name="twitter:card" content="summary">
 <!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -76,8 +76,9 @@
 <div id="cascadedata" class="section level1">
 <div class="page-header"><h1 class="hasAnchor">
 <a href="#cascadedata" class="anchor"></a>CascadeData</h1></div>
-<p>The goal of CascadeData is to provide the experimental data <a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE39411">GSE39411</a> in a ready to use format. Vallat L, Kemper CA, Jung N, Maumy-Bertrand M, Bertrand F, , Bahram S, (2013), “Reverse-engineering the genetic circuitry of a cancer cell with predicted intervention in chronic lymphocytic leukemia”. <em>Proc Natl Acad Sci USA</em>, <strong>110</strong>(2):459-64, <a href="https://dx.doi.org/10.1073/pnas.1211130110" class="uri">https://dx.doi.org/10.1073/pnas.1211130110</a>.</p>
+<p>The goal of CascadeData is to provide the experimental data <a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE39411">GSE39411</a> in a ready to use format. Vallat L, Kemper CA, Jung N, Maumy-Bertrand M, Bertrand F, …, Bahram S, (2013), “Reverse-engineering the genetic circuitry of a cancer cell with predicted intervention in chronic lymphocytic leukemia”. <em>Proc Natl Acad Sci USA</em>, <strong>110</strong>(2):459-64, <a href="https://dx.doi.org/10.1073/pnas.1211130110" class="uri">https://dx.doi.org/10.1073/pnas.1211130110</a>.</p>
 <p>These are featured as examples by packages such as the Cascade one, a modeling tool allowing gene selection, reverse engineering, and prediction in cascade networks. (Jung, N., Bertrand, F., Bahram, S., Vallat, L., and Maumy-Bertrand, M., 2014, <a href="http://dx.doi.org/10.1093/bioinformatics/btt705" class="uri">http://dx.doi.org/10.1093/bioinformatics/btt705</a>).</p>
+<p>This webite and these examples were created by F. Bertrand and M. Maumy-Bertrand.</p>
 <div id="installation" class="section level2">
 <h2 class="hasAnchor">
 <a href="#installation" class="anchor"></a>Installation</h2>
@@ -89,7 +90,10 @@
 <div id="examples" class="section level2">
 <h2 class="hasAnchor">
 <a href="#examples" class="anchor"></a>Examples</h2>
-<p>Two data frames with 54613 probesets measured 6 times throught 4 time points.</p>
+<div id="probesets" class="section level3">
+<h3 class="hasAnchor">
+<a href="#probesets" class="anchor"></a>Probesets</h3>
+<p>Two data frames with 54613 probesets with repeated measurements on 6 independent subjects at 4 time points.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/data">data</a></span>(micro_S)
 <span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/str">str</a></span>(micro_S)
 <span class="co">#&gt; 'data.frame':    54613 obs. of  24 variables:</span>
@@ -144,9 +148,79 @@
 <span class="co">#&gt;  $ N6_US_T90 : num  148.1 46.4 79.9 257.7 20.7 ...</span>
 <span class="co">#&gt;  $ N6_US_T210: num  198.1 53.9 68.6 223.3 18.9 ...</span>
 <span class="co">#&gt;  $ N6_US_T390: num  155.8 42.6 63.2 236.7 15.2 ...</span></code></pre></div>
-<p>You can also embed plots, for example:</p>
-<p><img src="reference/figures/README-heatmapS-1.png" width="100%"></p>
-<p><img src="reference/figures/README-heatmapUS-1.png" width="100%"></p>
+<p>Some preliminary between group comparison. First create grouping factor.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">groupf=<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/factor">factor</a></span>(<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/c">c</a></span>(<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/rep">rep</a></span>(<span class="st">"S"</span>,<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/nrow">ncol</a></span>(micro_S)),<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/rep">rep</a></span>(<span class="st">"US"</span>,<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/nrow">ncol</a></span>(micro_US))))</code></pre></div>
+<p>Then, create the 2 most discriminative components (probeset linear combinaison, i.e. scores) featuring 100 probesets each using sparse partial least squares discrimant analysis from the <a href="https://www.bioconductor.org/packages/release/bioc/html/mixOmics.html">mixOmics</a> package, <a href="doi:10.18129/B9.bioc.mixOmics">https://doi.org/doi:10.18129/B9.bioc.mixOmics</a>. An optimal choice of the number of components and of the number of kept genes can be carried out using cross-validation.</p>
+<p>First makes sure that the mixOmics Bioconductor package is installed.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="cf">if</span> (<span class="op">!</span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/ns-load">requireNamespace</a></span>(<span class="st">"limma"</span>, <span class="dt">quietly =</span> <span class="ot">TRUE</span>)){
+  <span class="cf">if</span> (<span class="op">!</span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/ns-load">requireNamespace</a></span>(<span class="st">"BiocManager"</span>, <span class="dt">quietly =</span> <span class="ot">TRUE</span>)){
+    <span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/install.packages">install.packages</a></span>(<span class="st">"BiocManager"</span>)
+    }
+  BiocManager<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/BiocManager/topics/install">install</a></span>(<span class="st">"limma"</span>)
+}</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">modsplsda=mixOmics<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/mixOmics/topics/splsda">splsda</a></span>(<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/t">t</a></span>(<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/cbind">cbind</a></span>(micro_S,micro_US)),groupf, <span class="dt">ncomp =</span> <span class="dv">2</span>, 
+<span class="dt">keepX =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/c">c</a></span>(<span class="dv">100</span>, <span class="dv">100</span>))</code></pre></div>
+<p>Create a clustered image map (cim, i.e. heat map) to represent the results of the splsda analysis.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">mixOmics<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/mixOmics/topics/cim">cim</a></span>(modsplsda)</code></pre></div>
+<p><img src="reference/figures/README-cim-1.png" width="100%"></p>
+<p>Retrieve the names of the probesets that were selected to create the 2 splsda components</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">selectedprobesets&lt;-<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/unique">unique</a></span>(mixOmics<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/mixOmics/topics/selectVar">selectVar</a></span>(modsplsda)<span class="op">$</span>name,
+mixOmics<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/mixOmics/topics/selectVar">selectVar</a></span>(modsplsda, <span class="dt">comp=</span><span class="dv">2</span>)<span class="op">$</span>name)</code></pre></div>
+<p>First makes sure that the limma Bioconductor package is installed.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="cf">if</span> (<span class="op">!</span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/ns-load">requireNamespace</a></span>(<span class="st">"limma"</span>, <span class="dt">quietly =</span> <span class="ot">TRUE</span>)){
+  <span class="cf">if</span> (<span class="op">!</span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/ns-load">requireNamespace</a></span>(<span class="st">"BiocManager"</span>, <span class="dt">quietly =</span> <span class="ot">TRUE</span>)){
+    <span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/install.packages">install.packages</a></span>(<span class="st">"BiocManager"</span>)
+    }
+  BiocManager<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/BiocManager/topics/install">install</a></span>(<span class="st">"limma"</span>)
+}</code></pre></div>
+<p>Using the <a href="http://bioconductor.org/packages/release/bioc/html/limma.html">limma</a>, <a href="doi:10.18129/B9.bioc.limma">https://doi.org/doi:10.18129/B9.bioc.limma</a>, plotMDS function to create the multidimensional scaling plot of distances between the probeset expression profiles that were selected using splsda.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">limma<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/limma/topics/plotMDS">plotMDS</a></span>(<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/cbind">cbind</a></span>(micro_S,micro_US)[selectedprobesets,])</code></pre></div>
+<p><img src="reference/figures/README-plotMDS-1.png" width="100%"></p>
+</div>
+<div id="entrez-geneids" class="section level3">
+<h3 class="hasAnchor">
+<a href="#entrez-geneids" class="anchor"></a>Entrez GeneIDs</h3>
+<p>The <a href="https://cran.r-project.org/package=jetset">jetset</a> package enables the selection of optimal probe sets from the HG-U95Av2, HG-U133A, HG-U133 Plus 2.0, or U133 X3P microarray platforms. It requires the <a href="https://bioconductor.org/packages/release/data/annotation/html/org.Hs.eg.db.html">org.Hs.eg.db</a> Bioconductor package, <a href="doi:10.18129/B9.bioc.org.Hs.eg.db">https://doi.org/doi:10.18129/B9.bioc.org.Hs.eg.db</a>.</p>
+<p>First makes sure that the jetset CRAN package and the org.Hs.eg.db Bioconductor package are installed.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="cf">if</span> (<span class="op">!</span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/ns-load">requireNamespace</a></span>(<span class="st">"org.Hs.eg.db"</span>, <span class="dt">quietly =</span> <span class="ot">TRUE</span>)){
+  <span class="cf">if</span> (<span class="op">!</span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/ns-load">requireNamespace</a></span>(<span class="st">"BiocManager"</span>, <span class="dt">quietly =</span> <span class="ot">TRUE</span>)){
+      <span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/install.packages">install.packages</a></span>(<span class="st">"BiocManager"</span>)
+    }
+  BiocManager<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/BiocManager/topics/install">install</a></span>(<span class="st">"org.Hs.eg.db"</span>, <span class="dt">version =</span> <span class="st">"3.8"</span>)
+}
+<span class="co">#&gt; </span>
+<span class="cf">if</span> (<span class="op">!</span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/ns-load">requireNamespace</a></span>(<span class="st">"jetset"</span>, <span class="dt">quietly =</span> <span class="ot">TRUE</span>)){
+  <span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/install.packages">install.packages</a></span>(<span class="st">"jetset"</span>)
+}</code></pre></div>
+<p>Retrieve the optimal probesets for a given Entrez GeneID.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(jetset)
+resjetset=jetset<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/jetset/topics/jmap">jmap</a></span>(<span class="st">"hgu133plus2"</span>, <span class="dt">eg =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/sort">sort</a></span>(<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/unique">unique</a></span>(scores.hgu133plus2<span class="op">$</span>EntrezID)))</code></pre></div>
+<p>Select the optimal probesets from the datasets for a given Entrez GeneID.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">micro_S_jetset&lt;-micro_S[resjetset,]
+<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/colnames">rownames</a></span>(micro_S_jetset)&lt;-<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/names">names</a></span>(resjetset)
+micro_US_jetset&lt;-micro_US[resjetset,]
+<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/colnames">rownames</a></span>(micro_US_jetset)&lt;-<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/names">names</a></span>(resjetset)</code></pre></div>
+<p>Then, create the 2 most discriminative components (probeset linear combinaison, i.e. scores) featuring 100 probesets each using sparse partial least squares discrimant analysis from the <a href="https://www.bioconductor.org/packages/release/bioc/html/mixOmics.html">mixOmics</a> package, <a href="doi:10.18129/B9.bioc.mixOmics">https://doi.org/doi:10.18129/B9.bioc.mixOmics</a>. An optimal choice of the number of components and of the number of kept genes can be carried out using cross-validation.</p>
+<p>First makes sure that the mixOmics Bioconductor package is installed.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">modsplsda_jetset=mixOmics<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/mixOmics/topics/splsda">splsda</a></span>(<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/t">t</a></span>(<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/cbind">cbind</a></span>(micro_S_jetset,micro_US_jetset)), 
+groupf, <span class="dt">ncomp =</span> <span class="dv">2</span>, <span class="dt">keepX =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/c">c</a></span>(<span class="dv">100</span>, <span class="dv">100</span>))</code></pre></div>
+<p>Create a clustered image map (cim, i.e. heat map) to represent the results of the splsda analysis.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">mixOmics<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/mixOmics/topics/cim">cim</a></span>(modsplsda_jetset)</code></pre></div>
+<p><img src="reference/figures/README-cimjetset-1.png" width="100%"></p>
+<p>Retrieve the Entrez GeneIDs that were selected to create the 2 splsda components</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">selectedEntrezGeneIDs&lt;-<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/unique">unique</a></span>(mixOmics<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/mixOmics/topics/selectVar">selectVar</a></span>(modsplsda_jetset)<span class="op">$</span>name,
+mixOmics<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/mixOmics/topics/selectVar">selectVar</a></span>(modsplsda, <span class="dt">comp=</span><span class="dv">2</span>)<span class="op">$</span>name)</code></pre></div>
+<p>First makes sure that the limma Bioconductor package is installed.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="cf">if</span> (<span class="op">!</span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/ns-load">requireNamespace</a></span>(<span class="st">"limma"</span>, <span class="dt">quietly =</span> <span class="ot">TRUE</span>)){
+  <span class="cf">if</span> (<span class="op">!</span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/ns-load">requireNamespace</a></span>(<span class="st">"BiocManager"</span>, <span class="dt">quietly =</span> <span class="ot">TRUE</span>)){
+    <span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/install.packages">install.packages</a></span>(<span class="st">"BiocManager"</span>)
+    }
+  BiocManager<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/BiocManager/topics/install">install</a></span>(<span class="st">"limma"</span>)
+}</code></pre></div>
+<p>Using the <a href="http://bioconductor.org/packages/release/bioc/html/limma.html">limma</a>, <a href="doi:10.18129/B9.bioc.limma">https://doi.org/doi:10.18129/B9.bioc.limma</a>, plotMDS function to create the multidimensional scaling plot of distances between the Entrez GeneID expression profiles that were selected using splsda.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">limma<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/limma/topics/plotMDS">plotMDS</a></span>(<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/cbind">cbind</a></span>(micro_S,micro_US)[selectedEntrezGeneIDs,])</code></pre></div>
+<p><img src="reference/figures/README-plotMDSegid-1.png" width="100%"></p>
+</div>
 </div>
 </div>
   </div>

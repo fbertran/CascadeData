@@ -15,7 +15,7 @@ The goal of CascadeData is to provide the experimental data [GSE39411](https://w
 
 These are featured as examples by packages such as the Cascade one, a modeling tool allowing gene selection, reverse engineering, and prediction in cascade networks. (Jung, N., Bertrand, F., Bahram, S., Vallat, L., and Maumy-Bertrand, M., 2014, <http://dx.doi.org/10.1093/bioinformatics/btt705>).
 
-This webite and these examples were created by F. Bertrand and M. Maumy-Bertrand.
+This website and these examples were created by F. Bertrand and M. Maumy-Bertrand.
 
 
 ## Installation
@@ -175,6 +175,7 @@ if (!requireNamespace("org.Hs.eg.db", quietly = TRUE)){
     }
   BiocManager::install("org.Hs.eg.db", version = "3.8")
 }
+#> 
 if (!requireNamespace("jetset", quietly = TRUE)){
   install.packages("jetset")
 }

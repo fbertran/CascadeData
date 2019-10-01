@@ -5,6 +5,7 @@ output: github_document
 ---
 
 [![CRAN status](https://www.r-pkg.org/badges/version/CascadeData)](https://cran.r-project.org/package=CascadeData)
+[![DOI](https://zenodo.org/badge/167803258.svg)](https://zenodo.org/badge/latestdoi/167803258)
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 

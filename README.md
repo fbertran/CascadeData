@@ -1,20 +1,27 @@
----
-title: "Experimental Data of Cascade Experiments in Genomics"
-author: "Frédéric Bertrand and Myriam Maumy-Bertrand"
-output: github_document
----
-
-[![CRAN status](https://www.r-pkg.org/badges/version/CascadeData)](https://cran.r-project.org/package=CascadeData)
-[![DOI](https://zenodo.org/badge/167803258.svg)](https://zenodo.org/badge/latestdoi/167803258)
-
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
 
-# CascadeData
+
+# CascadeData <img src="man/figures/logo.png" align="right" width="200"/>
+
+# Experimental Data of Cascade Experiments in Genomics
+## Frédéric Bertrand and Myriam Maumy-Bertrand
+
+<!-- badges: start -->
+[![Lifecycle: stable](https://img.shields.io/badge/lifecycle-stable-green.svg)](https://lifecycle.r-lib.org/articles/stages.html)
+[![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
+[![R-CMD-check](https://github.com/fbertran/CascadeData/workflows/R-CMD-check/badge.svg)](https://github.com/fbertran/CascadeData/actions)
+[![Codecov test coverage](https://codecov.io/gh/fbertran/CascadeData/branch/master/graph/badge.svg)](https://codecov.io/gh/fbertran/CascadeData?branch=master)
+[![CRAN status](https://www.r-pkg.org/badges/version/CascadeData)](https://cran.r-project.org/package=CascadeData)
+[![CRAN RStudio mirror downloads](https://cranlogs.r-pkg.org/badges/CascadeData)](https://cran.r-project.org/package=CascadeData)
+[![GitHub Repo stars](https://img.shields.io/github/stars/fbertran/CascadeData?style=social)](https://github.com/fbertran/CascadeData)
+[![DOI](https://zenodo.org/badge/167803258.svg)](https://zenodo.org/badge/latestdoi/167803258)
+<!-- badges: end -->
+
 
 The goal of CascadeData is to provide the experimental data [GSE39411](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE39411) in a ready to use format. Vallat L, Kemper CA, Jung N, Maumy-Bertrand M, Bertrand F, ..., Bahram S, (2013), "Reverse-engineering the genetic circuitry of a cancer cell with predicted intervention in chronic lymphocytic leukemia". *Proc Natl Acad Sci USA*, **110**(2):459-64, <https://dx.doi.org/10.1073/pnas.1211130110>.
 
-These are featured as examples by packages such as the Cascade one, a modeling tool allowing gene selection, reverse engineering, and prediction in cascade networks. (Jung, N., Bertrand, F., Bahram, S., Vallat, L., and Maumy-Bertrand, M., 2014, <http://dx.doi.org/10.1093/bioinformatics/btt705>).
+These are featured as examples by packages such as the Cascade one, a modeling tool allowing gene selection, reverse engineering, and prediction in cascade networks. (Jung, N., Bertrand, F., Bahram, S., Vallat, L., and Maumy-Bertrand, M., 2014, <https://dx.doi.org/10.1093/bioinformatics/btt705>).
 
 This website and these examples were created by F. Bertrand and M. Maumy-Bertrand.
 
@@ -107,7 +114,7 @@ Some preliminary between group comparison. First create grouping factor.
 groupf=factor(c(rep("S",ncol(micro_S)),rep("US",ncol(micro_US))))
 ```
 
-Then, create the 2 most discriminative components (probeset linear combinaison, i.e. scores) featuring 100 probesets each using sparse partial least squares discrimant analysis from the [mixOmics](https://www.bioconductor.org/packages/release/bioc/html/mixOmics.html) package, [https://doi.org/doi:10.18129/B9.bioc.mixOmics](doi:10.18129/B9.bioc.mixOmics). An optimal choice of the number of components and of the number of kept genes can be carried out using cross-validation.
+Then, create the 2 most discriminative components (probeset linear combinaison, i.e. scores) featuring 100 probesets each using sparse partial least squares discrimant analysis from the [mixOmics](https://www.bioconductor.org/packages/release/bioc/html/mixOmics.html) package, [doi:10.18129/B9.bioc.mixOmics](https://doi.org/10.18129/B9.bioc.mixOmics). An optimal choice of the number of components and of the number of kept genes can be carried out using cross-validation.
 
 First makes sure that the mixOmics Bioconductor package is installed.
 
@@ -154,7 +161,7 @@ if (!requireNamespace("limma", quietly = TRUE)){
 }
 ```
 
-Using the [limma](http://bioconductor.org/packages/release/bioc/html/limma.html), [https://doi.org/doi:10.18129/B9.bioc.limma](doi:10.18129/B9.bioc.limma), plotMDS function to create the multidimensional scaling plot of distances between the probeset expression profiles that were selected using splsda.
+Using the [limma](https://bioconductor.org/packages/release/bioc/html/limma.html), [doi:10.18129/B9.bioc.limma](https://doi.org/10.18129/B9.bioc.limma), plotMDS function to create the multidimensional scaling plot of distances between the probeset expression profiles that were selected using splsda.
 
 ```r
 limma::plotMDS(cbind(micro_S,micro_US)[selectedprobesets,])
@@ -164,7 +171,7 @@ limma::plotMDS(cbind(micro_S,micro_US)[selectedprobesets,])
 
 ### Entrez GeneIDs
 
-The [jetset](https://cran.r-project.org/package=jetset) package enables the selection of optimal probe sets from the HG-U95Av2, HG-U133A, HG-U133 Plus 2.0, or U133 X3P microarray platforms. It requires the [org.Hs.eg.db](https://bioconductor.org/packages/release/data/annotation/html/org.Hs.eg.db.html) Bioconductor package, [https://doi.org/doi:10.18129/B9.bioc.org.Hs.eg.db](doi:10.18129/B9.bioc.org.Hs.eg.db).
+The [jetset](https://cran.r-project.org/package=jetset) package enables the selection of optimal probe sets from the HG-U95Av2, HG-U133A, HG-U133 Plus 2.0, or U133 X3P microarray platforms. It requires the [org.Hs.eg.db](https://bioconductor.org/packages/release/data/annotation/html/org.Hs.eg.db.html) Bioconductor package, [doi:10.18129/B9.bioc.org.Hs.eg.db](https://doi.org/10.18129/B9.bioc.org.Hs.eg.db).
 
 
 First makes sure that the jetset CRAN package and the org.Hs.eg.db Bioconductor package are installed.
@@ -176,7 +183,6 @@ if (!requireNamespace("org.Hs.eg.db", quietly = TRUE)){
     }
   BiocManager::install("org.Hs.eg.db", version = "3.8")
 }
-#> 
 if (!requireNamespace("jetset", quietly = TRUE)){
   install.packages("jetset")
 }
@@ -198,7 +204,7 @@ micro_US_jetset<-micro_US[resjetset,]
 rownames(micro_US_jetset)<-names(resjetset)
 ```
 
-Then, create the 2 most discriminative components (probeset linear combinaison, i.e. scores) featuring 100 probesets each using sparse partial least squares discrimant analysis from the [mixOmics](https://www.bioconductor.org/packages/release/bioc/html/mixOmics.html) package, [https://doi.org/doi:10.18129/B9.bioc.mixOmics](doi:10.18129/B9.bioc.mixOmics). An optimal choice of the number of components and of the number of kept genes can be carried out using cross-validation.
+Then, create the 2 most discriminative components (probeset linear combinaison, i.e. scores) featuring 100 probesets each using sparse partial least squares discrimant analysis from the [mixOmics](https://www.bioconductor.org/packages/release/bioc/html/mixOmics.html) package, [doi:10.18129/B9.bioc.mixOmics](https://doi.org/10.18129/B9.bioc.mixOmics). An optimal choice of the number of components and of the number of kept genes can be carried out using cross-validation.
 
 First makes sure that the mixOmics Bioconductor package is installed.
 
@@ -235,7 +241,7 @@ if (!requireNamespace("limma", quietly = TRUE)){
 }
 ```
 
-Using the [limma](http://bioconductor.org/packages/release/bioc/html/limma.html), [https://doi.org/doi:10.18129/B9.bioc.limma](doi:10.18129/B9.bioc.limma), plotMDS function to create the multidimensional scaling plot of distances between the Entrez GeneID expression profiles that were selected using splsda.
+Using the [limma](https://bioconductor.org/packages/release/bioc/html/limma.html), [doi:10.18129/B9.bioc.limma](https://doi.org/10.18129/B9.bioc.limma), plotMDS function to create the multidimensional scaling plot of distances between the Entrez GeneID expression profiles that were selected using splsda.
 
 ```r
 limma::plotMDS(cbind(micro_S,micro_US)[selectedEntrezGeneIDs,])

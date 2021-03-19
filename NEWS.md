@@ -1,3 +1,7 @@
+# CascadeData 1.3
+
+* Roxygen the package, add badges, logo and update pkgdown site.
+
 # CascadeData 1.2
 
 * Added references for the dataset and GSE accession number.

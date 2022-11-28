@@ -31,7 +31,7 @@
 #' Maumy-Bertrand and Nicolas Jung with biological insights from Laurent
 #' Vallat.
 #' 
-#' Maintainer: Frederic Bertrand <frederic.bertrand@@math.unistra.fr>
+#' Maintainer: Frederic Bertrand <frederic.bertrand@@utt.fr>
 #' @references Jung, N., Bertrand, F., Bahram, S., Vallat, L., and
 #' Maumy-Bertrand, M. (2013). Cascade: a R-package to study, predict and
 #' simulate the diffusion of a signal through a temporal gene network.

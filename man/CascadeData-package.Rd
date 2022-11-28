@@ -47,6 +47,6 @@ This package has been written by Frederic Bertrand, Myriam
 Maumy-Bertrand and Nicolas Jung with biological insights from Laurent
 Vallat.
 
-Maintainer: Frederic Bertrand <frederic.bertrand@math.unistra.fr>
+Maintainer: Frederic Bertrand <frederic.bertrand@utt.fr>
 }
 \keyword{package}

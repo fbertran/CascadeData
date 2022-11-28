@@ -1,3 +1,7 @@
+# CascadeData 1.4
+
+* Update maintainer address and description file
+
 # CascadeData 1.3
 
 * Roxygen the package, add badges, logo and update pkgdown site.

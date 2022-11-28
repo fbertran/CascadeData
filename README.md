@@ -11,7 +11,7 @@
 [![Lifecycle: stable](https://img.shields.io/badge/lifecycle-stable-green.svg)](https://lifecycle.r-lib.org/articles/stages.html)
 [![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
 [![R-CMD-check](https://github.com/fbertran/CascadeData/workflows/R-CMD-check/badge.svg)](https://github.com/fbertran/CascadeData/actions)
-[![Codecov test coverage](https://codecov.io/gh/fbertran/CascadeData/branch/master/graph/badge.svg)](https://codecov.io/gh/fbertran/CascadeData?branch=master)
+[![Codecov test coverage](https://codecov.io/gh/fbertran/CascadeData/branch/master/graph/badge.svg)](https://app.codecov.io/gh/fbertran/CascadeData?branch=master)
 [![CRAN status](https://www.r-pkg.org/badges/version/CascadeData)](https://cran.r-project.org/package=CascadeData)
 [![CRAN RStudio mirror downloads](https://cranlogs.r-pkg.org/badges/CascadeData)](https://cran.r-project.org/package=CascadeData)
 [![GitHub Repo stars](https://img.shields.io/github/stars/fbertran/CascadeData?style=social)](https://github.com/fbertran/CascadeData)

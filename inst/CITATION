@@ -3,19 +3,37 @@ citHeader("To cite package ''CascadeData'' in publications use:")
 year <- sub(".*(2[[:digit:]]{3})-.*", "\\1", meta$Date, perl = TRUE)
 vers <- paste("R package version", meta$Version)
 
-citEntry(entry = "Article",
-         title = "Cascade: a R-package to study, predict and simulate the diffusion of a signal through a temporal gene network",
-         author = personList(as.person("Nicolas Jung"),
-                             as.person("Frederic Bertrand"),
-                             as.person("Seiamak Bahram"),
-                             as.person("Myriam Maumy-Bertrand"),
-                             as.person("Laurent Vallat")
-                             ),
+titl <- "Cascade: a R-package to study, predict and simulate the diffusion of a signal through a temporal gene network"
+auth <- c(person(given = "Nicolas", family= "Jung"),
+                             person(given = "Frederic", family= "Bertrand"),
+                             person(given = "Seiamak", family= "Bahram"),
+                             person(given = "Laurent", family= "Vallat"),
+                             person(given = "Myriam", family= "Maumy-Bertrand"))
+doi <- paste0("10.32614/CRAN.package.", meta$Package)
+urldoi <- paste0("https://doi.org/", doi)
+
+bibentry(bibtype = "Article",
+         title = titl,
+         author = auth,
          year = 2014,
-         
 journal="Bioinformatics",
 issue=4,
 volume=30,
 pages="571-3",
+url="https://doi.org/10.1093/bioinformatics/btt705",
          textVersion =
-         paste0("Jung, N., Bertrand, F., Bahram, S., Vallat, L., and Maumy-Bertrand, M. (2014). Cascade: a R-package to study, predict and simulate the diffusion of a signal through a temporal gene network. Bioinformatics, 30(4):571-3, btt705."))
+         paste0("Jung, N., Bertrand, F., Bahram, S., Vallat, L., and Maumy-Bertrand, M. (2014). Cascade: a R-package to study, predict and simulate the diffusion of a signal through a temporal gene network. Bioinformatics, 30(4):571-573, btt705, https://doi.org/10.1093/bioinformatics/btt705.")
+         )
+
+bibentry(bibtype="Manual",
+         title = titl,
+         author = auth,
+   publisher = "manual",
+         year         = year,
+         note         = vers,
+         url          = "https://fbertran.github.io/CascadeData/",
+         textVersion = 
+         paste("Jung, N., Bertrand, F., Bahram, S., Vallat, L., and Maumy-Bertrand, M. (",year ,"). ",
+               titl, ", ", vers, ". doi:", doi, ".", sep=""
+               )
+)         

@@ -16,7 +16,10 @@ knitr::opts_chunk$set(
 # Experimental Data of Cascade Experiments in Genomics
 ## Frédéric Bertrand and Myriam Maumy-Bertrand
 
+<https://doi.org/10.32614/CRAN.package.bigalgebra>
+
 <!-- badges: start -->
+[![DOI](https://img.shields.io/badge/doi-10.32614/CRAN.package.ModStatR-blue.svg)](https://doi.org/10.32614/CRAN.package.ModStatR)
 [![Lifecycle: stable](https://img.shields.io/badge/lifecycle-stable-green.svg)](https://lifecycle.r-lib.org/articles/stages.html)
 [![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
 [![R-CMD-check](https://github.com/fbertran/CascadeData/workflows/R-CMD-check/badge.svg)](https://github.com/fbertran/CascadeData/actions)
@@ -24,7 +27,6 @@ knitr::opts_chunk$set(
 [![CRAN status](https://www.r-pkg.org/badges/version/CascadeData)](https://cran.r-project.org/package=CascadeData)
 [![CRAN RStudio mirror downloads](https://cranlogs.r-pkg.org/badges/CascadeData)](https://cran.r-project.org/package=CascadeData)
 [![GitHub Repo stars](https://img.shields.io/github/stars/fbertran/CascadeData?style=social)](https://github.com/fbertran/CascadeData)
-[![DOI](https://zenodo.org/badge/167803258.svg)](https://zenodo.org/badge/latestdoi/167803258)
 <!-- badges: end -->
 
 

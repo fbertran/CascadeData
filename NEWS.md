@@ -1,3 +1,13 @@
+# CascadeData 1.6
+
+* Maintainer email update
+* Added package doi
+
+# CascadeData 1.5
+
+* Added unit tests for the package
+* Updated citation file
+
 # CascadeData 1.4
 
 * Update maintainer address and description file

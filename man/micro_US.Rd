@@ -6,6 +6,20 @@
 \title{Unstimulated control dataset}
 \format{
 A data frame with 54613 probesets measured 6 times throught 4 time
+points. It features 54613 rows and 24 numeric columns.
+Columns are named **exactly** as:
+\code{N1_US_T60}, \code{N1_US_T90}, \code{N1_US_T210}, \code{N1_US_T390},
+\code{N2_US_T60}, \code{N2_US_T90}, \code{N2_US_T210}, \code{N2_US_T390},
+\code{N3_US_T60}, \code{N3_US_T90}, \code{N3_US_T210}, \code{N3_US_T390},
+\code{N4_US_T60}, \code{N4_US_T90}, \code{N4_US_T210}, \code{N4_US_T390},
+\code{N5_US_T60}, \code{N5_US_T90}, \code{N5_US_T210}, \code{N5_US_T390},
+\code{N6_US_T60}, \code{N6_US_T90}, \code{N6_US_T210}, \code{N6_US_T390}.
+
+The ordering is strict: for each replicate \code{N1}, \code{N2}, \code{N3}, 
+\code{N4} , \code{N5}, {\code{N6}} the time points are 
+ordered \code{T60}, \code{T90}, \code{T210}, \code{T390}.
+
+A data frame with 54613 probesets measured 6 times throught 4 time
 points.
 }
 \description{

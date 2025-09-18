@@ -7,7 +7,10 @@
 # Experimental Data of Cascade Experiments in Genomics
 ## Frédéric Bertrand and Myriam Maumy-Bertrand
 
+<https://doi.org/10.32614/CRAN.package.bigalgebra>
+
 <!-- badges: start -->
+[![DOI](https://img.shields.io/badge/doi-10.32614/CRAN.package.ModStatR-blue.svg)](https://doi.org/10.32614/CRAN.package.ModStatR)
 [![Lifecycle: stable](https://img.shields.io/badge/lifecycle-stable-green.svg)](https://lifecycle.r-lib.org/articles/stages.html)
 [![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
 [![R-CMD-check](https://github.com/fbertran/CascadeData/workflows/R-CMD-check/badge.svg)](https://github.com/fbertran/CascadeData/actions)
@@ -15,7 +18,6 @@
 [![CRAN status](https://www.r-pkg.org/badges/version/CascadeData)](https://cran.r-project.org/package=CascadeData)
 [![CRAN RStudio mirror downloads](https://cranlogs.r-pkg.org/badges/CascadeData)](https://cran.r-project.org/package=CascadeData)
 [![GitHub Repo stars](https://img.shields.io/github/stars/fbertran/CascadeData?style=social)](https://github.com/fbertran/CascadeData)
-[![DOI](https://zenodo.org/badge/167803258.svg)](https://zenodo.org/badge/latestdoi/167803258)
 <!-- badges: end -->
 
 
@@ -31,14 +33,14 @@ This website and these examples were created by F. Bertrand and M. Maumy-Bertran
 You can install the released version of CascadeData from [CRAN](https://CRAN.R-project.org) with:
 
 
-```r
+``` r
 install.packages("CascadeData")
 ```
 
 You can install the development version of CascadeData from [github](https://github.com) with:
 
 
-```r
+``` r
 devtools::install_github("fbertran/CascadeData")
 ```
 ## Examples
@@ -47,7 +49,7 @@ devtools::install_github("fbertran/CascadeData")
 Two data frames with 54613 probesets with repeated measurements on 6 independent subjects at 4 time points.
 
 
-```r
+``` r
 data(micro_S)
 str(micro_S)
 #> 'data.frame':	54613 obs. of  24 variables:
@@ -78,7 +80,7 @@ str(micro_S)
 ```
 
 
-```r
+``` r
 data(micro_US)
 str(micro_US)
 #> 'data.frame':	54613 obs. of  24 variables:
@@ -110,7 +112,7 @@ str(micro_US)
 
 Some preliminary between group comparison. First create grouping factor.
 
-```r
+``` r
 groupf=factor(c(rep("S",ncol(micro_S)),rep("US",ncol(micro_US))))
 ```
 
@@ -118,7 +120,7 @@ Then, create the 2 most discriminative components (probeset linear combinaison, 
 
 First makes sure that the mixOmics Bioconductor package is installed.
 
-```r
+``` r
 if (!requireNamespace("limma", quietly = TRUE)){
   if (!requireNamespace("BiocManager", quietly = TRUE)){
     install.packages("BiocManager")
@@ -128,7 +130,7 @@ if (!requireNamespace("limma", quietly = TRUE)){
 ```
 
 
-```r
+``` r
 modsplsda=mixOmics::splsda(t(cbind(micro_S,micro_US)),groupf, ncomp = 2, 
 keepX = c(100, 100))
 ```
@@ -136,23 +138,26 @@ keepX = c(100, 100))
 Create a clustered image map (cim, i.e. heat map) to represent the results of the splsda analysis.
 
 
-```r
+``` r
 mixOmics::cim(modsplsda)
 ```
 
-<img src="man/figures/README-cim-1.png" title="plot of chunk cim" alt="plot of chunk cim" width="100%" />
+<div class="figure">
+<img src="man/figures/README-cim-1.png" alt="plot of chunk cim" width="100%" />
+<p class="caption">plot of chunk cim</p>
+</div>
 
 Retrieve the names of the probesets that were selected to create the 2 splsda components
 
 
-```r
+``` r
 selectedprobesets<-unique(mixOmics::selectVar(modsplsda)$name,
 mixOmics::selectVar(modsplsda, comp=2)$name)
 ```
 
 First makes sure that the limma Bioconductor package is installed.
 
-```r
+``` r
 if (!requireNamespace("limma", quietly = TRUE)){
   if (!requireNamespace("BiocManager", quietly = TRUE)){
     install.packages("BiocManager")
@@ -163,11 +168,14 @@ if (!requireNamespace("limma", quietly = TRUE)){
 
 Using the [limma](https://bioconductor.org/packages/release/bioc/html/limma.html), [doi:10.18129/B9.bioc.limma](https://doi.org/10.18129/B9.bioc.limma), plotMDS function to create the multidimensional scaling plot of distances between the probeset expression profiles that were selected using splsda.
 
-```r
+``` r
 limma::plotMDS(cbind(micro_S,micro_US)[selectedprobesets,])
 ```
 
-<img src="man/figures/README-plotMDS-1.png" title="plot of chunk plotMDS" alt="plot of chunk plotMDS" width="100%" />
+<div class="figure">
+<img src="man/figures/README-plotMDS-1.png" alt="plot of chunk plotMDS" width="100%" />
+<p class="caption">plot of chunk plotMDS</p>
+</div>
 
 ### Entrez GeneIDs
 
@@ -176,7 +184,7 @@ The [jetset](https://cran.r-project.org/package=jetset) package enables the sele
 
 First makes sure that the jetset CRAN package and the org.Hs.eg.db Bioconductor package are installed.
 
-```r
+``` r
 if (!requireNamespace("org.Hs.eg.db", quietly = TRUE)){
   if (!requireNamespace("BiocManager", quietly = TRUE)){
       install.packages("BiocManager")
@@ -190,14 +198,14 @@ if (!requireNamespace("jetset", quietly = TRUE)){
 
 Retrieve the optimal probesets for a given Entrez GeneID.
 
-```r
+``` r
 library(jetset)
 resjetset=jetset::jmap("hgu133plus2", eg = sort(unique(scores.hgu133plus2$EntrezID)))
 ```
 
 Select the optimal probesets from the datasets for a given Entrez GeneID.
 
-```r
+``` r
 micro_S_jetset<-micro_S[resjetset,]
 rownames(micro_S_jetset)<-names(resjetset)
 micro_US_jetset<-micro_US[resjetset,]
@@ -208,7 +216,7 @@ Then, create the 2 most discriminative components (probeset linear combinaison, 
 
 First makes sure that the mixOmics Bioconductor package is installed.
 
-```r
+``` r
 modsplsda_jetset=mixOmics::splsda(t(cbind(micro_S_jetset,micro_US_jetset)), 
 groupf, ncomp = 2, keepX = c(100, 100))
 ```
@@ -216,23 +224,26 @@ groupf, ncomp = 2, keepX = c(100, 100))
 Create a clustered image map (cim, i.e. heat map) to represent the results of the splsda analysis.
 
 
-```r
+``` r
 mixOmics::cim(modsplsda_jetset)
 ```
 
-<img src="man/figures/README-cimjetset-1.png" title="plot of chunk cimjetset" alt="plot of chunk cimjetset" width="100%" />
+<div class="figure">
+<img src="man/figures/README-cimjetset-1.png" alt="plot of chunk cimjetset" width="100%" />
+<p class="caption">plot of chunk cimjetset</p>
+</div>
 
 Retrieve the Entrez GeneIDs that were selected to create the 2 splsda components
 
 
-```r
+``` r
 selectedEntrezGeneIDs<-unique(mixOmics::selectVar(modsplsda_jetset)$name,
 mixOmics::selectVar(modsplsda, comp=2)$name)
 ```
 
 First makes sure that the limma Bioconductor package is installed.
 
-```r
+``` r
 if (!requireNamespace("limma", quietly = TRUE)){
   if (!requireNamespace("BiocManager", quietly = TRUE)){
     install.packages("BiocManager")
@@ -243,9 +254,12 @@ if (!requireNamespace("limma", quietly = TRUE)){
 
 Using the [limma](https://bioconductor.org/packages/release/bioc/html/limma.html), [doi:10.18129/B9.bioc.limma](https://doi.org/10.18129/B9.bioc.limma), plotMDS function to create the multidimensional scaling plot of distances between the Entrez GeneID expression profiles that were selected using splsda.
 
-```r
+``` r
 limma::plotMDS(cbind(micro_S,micro_US)[selectedEntrezGeneIDs,])
 ```
 
-<img src="man/figures/README-plotMDSegid-1.png" title="plot of chunk plotMDSegid" alt="plot of chunk plotMDSegid" width="100%" />
+<div class="figure">
+<img src="man/figures/README-plotMDSegid-1.png" alt="plot of chunk plotMDSegid" width="100%" />
+<p class="caption">plot of chunk plotMDSegid</p>
+</div>
 

@@ -1,27 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>/404.html</loc>
-  </url>
-  <url>
-    <loc>/authors.html</loc>
-  </url>
-  <url>
-    <loc>/index.html</loc>
-  </url>
-  <url>
-    <loc>/news/index.html</loc>
-  </url>
-  <url>
-    <loc>/reference/CascadeData-package.html</loc>
-  </url>
-  <url>
-    <loc>/reference/index.html</loc>
-  </url>
-  <url>
-    <loc>/reference/micro_S.html</loc>
-  </url>
-  <url>
-    <loc>/reference/micro_US.html</loc>
-  </url>
+<urlset xmlns = 'http://www.sitemaps.org/schemas/sitemap/0.9'>
+<url><loc>https://fbertran.github.io/CascadeData/404.html</loc></url>
+<url><loc>https://fbertran.github.io/CascadeData/authors.html</loc></url>
+<url><loc>https://fbertran.github.io/CascadeData/index.html</loc></url>
+<url><loc>https://fbertran.github.io/CascadeData/news/index.html</loc></url>
+<url><loc>https://fbertran.github.io/CascadeData/reference/CascadeData-package.html</loc></url>
+<url><loc>https://fbertran.github.io/CascadeData/reference/index.html</loc></url>
+<url><loc>https://fbertran.github.io/CascadeData/reference/micro_S.html</loc></url>
+<url><loc>https://fbertran.github.io/CascadeData/reference/micro_US.html</loc></url>
 </urlset>
+

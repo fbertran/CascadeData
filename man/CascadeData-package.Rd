@@ -4,32 +4,11 @@
 \name{CascadeData-package}
 \alias{CascadeData-package}
 \alias{CascadeData}
-\title{Experimental Data of Cascade Experiments in Genomics}
+\title{CascadeData: Experimental Data of Cascade Experiments in Genomics}
 \description{
-These are the data from the agressive subject group the from GSE39411
-dataset, \url{https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE39411},
-Vallat, L., Kemper, C. A., Jung, N., Maumy-Bertrand, M., Bertrand, F.,
-\dots{}, Bahram, S. (2013). Reverse-engineering the genetic circuitry of a
-cancer cell with predicted intervention in chronic lymphocytic leukemia.
-Proceedings of the National Academy of Sciences, 110(2), 459-464,
-\doi{10.1073/pnas.1211130110}
-}
-\details{
-5 leukemic CLL B-lymphocyte of aggressive form were stimulated in vitro with
-an anti-IgM antibody, activating the B-cell receptor (BCR). We analyzed the
-gene expression at 4 time points (60, 90, 210 and 390 minutes). Each gene
-expression measurement is performed both in stimulated cells and in control
-unstimulated cells.
+\if{html}{\figure{logo.png}{options: style='float: right' alt='logo' width='120'}}
 
-The data were normalized and are ready to use.
-
-These Experimental Data are used as examples by packages such as the Cascade
-one \doi{10.1093/bioinformatics/btt705} in one of its vignettes. The Cascade
-package is a modeling tool allowing gene selection, reverse engineering, and
-prediction in Cascade networks.
-
-Data were collected on HG-U133_Plus_2, Affymetrix Human Genome U133 Plus 2.0
-Array.
+These experimental expression data (5 leukemic 'CLL' B-lymphocyte of aggressive form from 'GSE39411', \doi{10.1073/pnas.1211130110}), after B-cell receptor stimulation, are used as examples by packages such as the 'Cascade' one, a modeling tool allowing gene selection, reverse engineering, and prediction in cascade networks. Jung, N., Bertrand, F., Bahram, S., Vallat, L., and Maumy-Bertrand, M. (2014) \doi{10.1093/bioinformatics/btt705}.
 }
 \references{
 Jung, N., Bertrand, F., Bahram, S., Vallat, L., and
@@ -42,11 +21,20 @@ Bahram, S. (2013). Reverse-engineering the genetic circuitry of a cancer
 cell with predicted intervention in chronic lymphocytic leukemia.
 \emph{Proceedings of the National Academy of Sciences}, 110(2), 459-464.
 }
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://fbertran.github.io/CascadeData/}
+  \item \url{https://github.com/fbertran/CascadeData/}
+  \item Report bugs at \url{https://github.com/fbertran/CascadeData/issues/}
+}
+
+}
 \author{
 This package has been written by Frederic Bertrand, Myriam
 Maumy-Bertrand and Nicolas Jung with biological insights from Laurent
-Vallat.
+Vallat. 
 
-Maintainer: Frederic Bertrand <frederic.bertrand@utt.fr>
+Maintainer: Frederic Bertrand <frederic.bertrand@lecnam.net>
 }
-\keyword{package}
+\keyword{internal}

@@ -7,10 +7,10 @@
 # Experimental Data of Cascade Experiments in Genomics
 ## Frédéric Bertrand and Myriam Maumy-Bertrand
 
-<https://doi.org/10.32614/CRAN.package.bigalgebra>
+<https://doi.org/10.32614/CRAN.package.CascadeData>
 
 <!-- badges: start -->
-[![DOI](https://img.shields.io/badge/doi-10.32614/CRAN.package.ModStatR-blue.svg)](https://doi.org/10.32614/CRAN.package.ModStatR)
+[![DOI](https://img.shields.io/badge/doi-10.32614/CRAN.package.CascadeData-blue.svg)](https://doi.org/10.32614/CRAN.package.CascadeData)
 [![Lifecycle: stable](https://img.shields.io/badge/lifecycle-stable-green.svg)](https://lifecycle.r-lib.org/articles/stages.html)
 [![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
 [![R-CMD-check](https://github.com/fbertran/CascadeData/workflows/R-CMD-check/badge.svg)](https://github.com/fbertran/CascadeData/actions)
@@ -191,6 +191,7 @@ if (!requireNamespace("org.Hs.eg.db", quietly = TRUE)){
     }
   BiocManager::install("org.Hs.eg.db", version = "3.8")
 }
+#> 
 if (!requireNamespace("jetset", quietly = TRUE)){
   install.packages("jetset")
 }

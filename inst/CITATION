@@ -32,6 +32,7 @@ bibentry(bibtype="Manual",
          year         = year,
          note         = vers,
          url          = "https://fbertran.github.io/CascadeData/",
+         doi = doi,
          textVersion = 
          paste("Jung, N., Bertrand, F., Bahram, S., Vallat, L., and Maumy-Bertrand, M. (",year ,"). ",
                titl, ", ", vers, ". doi:", doi, ".", sep=""
